@@ -8,7 +8,10 @@ The sample as-is will create a VAF app with an Extension Method and a UI Extensi
 - Unzip
 - Create Zip of the folder "VAF App With Nested UIX App"
 - Put Zip in (user)/Documents/Visual Studio (version)/Templates/Project Templates/Visual C#/M-Files (Don't Unzip)
-- In Visual Studio click New-Project and find the new template
+- In Visual Studio click New-Project and find the new template and create the project
+- Right click the project
+- Click Manage NuGet Packages
+- Click Restore where it says "Some NuGet packages are missing from this solution"
 
 ## Installing your app to M-Files
 - Open Post Build Command Line
@@ -27,3 +30,6 @@ Runs a powershell command to create a zip of the nested UI Extensibility app and
 start "Installing Vault Application" /D "$(TargetDir)" "MFVaultApplicationInstaller.exe" "VaultNameHere"
 ```
 Installs the app
+
+## To-Do
+- Figure out how to automatically get the NuGet packages
