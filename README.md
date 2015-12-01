@@ -17,7 +17,13 @@ The sample as-is will create a VAF app with an Extension Method and a UI Extensi
 
 ## Pre and Post build commands explanation
 ### Pre-Build
+```
+powershell.exe "Compress-Archive -Path '$(ProjectDir)\Nested UIX App' -DestinationPath '$(TargetDir)\Nested UIX App.zip' -Force"
+```
 Runs a powershell command to create a zip of the nested UI Extensibility app and place it in the debug folder
 
 ### Post-Build
+```
+start "Installing Vault Application" /D "$(TargetDir)" "MFVaultApplicationInstaller.exe" "test"
+```
 Installs the app
