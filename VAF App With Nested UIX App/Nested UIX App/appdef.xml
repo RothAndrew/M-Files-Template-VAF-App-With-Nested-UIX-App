@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<application
+      type="client-application"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.m-files.com/schemas/appdef-client-v2.xsd">
+  <guid>$guid2$</guid>
+  <name>$projectname$_NestedUIXApp</name>
+  <description>$projectname$_NestedUIXApp</description>
+  <publisher></publisher>
+  <version>1.0.0.0</version>
+  <copyright></copyright>
+  <required-mfiles-version>11.0.0.0</required-mfiles-version>
+  <enabled-by-default>true</enabled-by-default>
+  <optional>false</optional>
+  <master-application-guid>$guid1$</master-application-guid>
+  <modules>
+    <module environment="shellui">
+      <file>main.js</file>
+    </module>
+  </modules>
+</application>

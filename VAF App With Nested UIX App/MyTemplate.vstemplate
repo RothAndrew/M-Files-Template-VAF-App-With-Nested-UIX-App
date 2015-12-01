@@ -1,0 +1,33 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>VAF App With Nested UIX App</Name>
+    <Description>Project Template for a M-Files app using the Vault Application Framework that contains a nested UI Extensibility app</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>VAFAppWithNestedUIXApp</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="$safeprojectname$.csproj" File="$safeprojectname$.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="appdef.xml">appdef.xml</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="MFVaultApplicationInstaller.exe">MFVaultApplicationInstaller.exe</ProjectItem>
+      <Folder Name="Nested UIX App" TargetFolderName="Nested UIX App">
+        <ProjectItem ReplaceParameters="true" TargetFileName="appdef.xml">appdef.xml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="main.js">main.js</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="packages.config">packages.config</ProjectItem>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+      <Folder Name="src" TargetFolderName="src">
+        <ProjectItem ReplaceParameters="true" TargetFileName="VaultApplication.cs">VaultApplication.cs</ProjectItem>
+      </Folder>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
