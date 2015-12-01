@@ -24,6 +24,6 @@ Runs a powershell command to create a zip of the nested UI Extensibility app and
 
 ### Post-Build
 ```
-start "Installing Vault Application" /D "$(TargetDir)" "MFVaultApplicationInstaller.exe" "test"
+start "Installing Vault Application" /D "$(TargetDir)" "MFVaultApplicationInstaller.exe" "VaultNameHere"
 ```
 Installs the app
